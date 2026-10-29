@@ -1,0 +1,38 @@
+[
+	{
+		"id": "07chh3v9zfa9j24",
+		"title": "French Coffee Morning",
+		"description": "Come along and join us for a coffee and speaking French every Saturday at Collegians club in Flinders St. It does not matter what level you are - whether you can just say 'Bonjour' or have in depth conversation - everyone is welcome.",
+		"event_date": "Every Saturday from 11:30",
+		"event_time": "11:30am",
+		"event_type": "Cultural Event",
+		"location": "Collegians  Club, Flinders St",
+		"capacity": 0,
+		"requires_registration": false,
+		"image": "coffee_5s3xjz0uz6.jpeg"
+	},
+	{
+		"id": "6eogi0fgjiqm0uz",
+		"title": "Le Marché (French Markets)",
+		"description": "Step into the charm of a Parisian village with no passport required. On the first Sunday of every month, The Entertainment Quarter transforms into Le Marché – French Markets, a vibrant celebration of French culture, cuisine and craftsmanship.\r\n\r\nSet beneath the Market Canopy, more than 45 artisan stalls bring the spirit of France to life with fresh produce, handmade homewares, boutique fashion and an ever-changing line up of gourmet delights. Whether you’re a devoted Francophile or simply after a unique Sunday experience, Le Marché is your chance to flâner – to wander, taste and indulge.",
+		"event_date": "First Sunday of the month",
+		"event_time": "",
+		"event_type": "Cultural Event",
+		"location": "Sydney Enternainment Quarter - The Canopy",
+		"capacity": 0,
+		"requires_registration": false,
+		"image": "screenshot_2026_06_16_at_20_16_ivyghrmbn6.50.png"
+	},
+	{
+		"id": "8oavzloyq5qx6lw",
+		"title": "Alliance Francaise Illawarra Christmas Lunch",
+		"description": "Come along and join us for fun (pre) Christmas lunch on the 6th December at 12pm at Collegians Wollongong. Attendees buy their own lunch and we will offer the wine. If you are an AFI member, student, or friend, then you are very welcome to join us.",
+		"event_date": "6th December",
+		"event_time": "12pm",
+		"event_type": "Cultural Event",
+		"location": "Collegians Wollongong, 97-99 Church St, Wollongong",
+		"capacity": 0,
+		"requires_registration": true,
+		"image": "afi_christmas_lunch_z92upncfx9.png"
+	}
+]

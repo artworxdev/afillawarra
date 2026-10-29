@@ -1,0 +1,65 @@
+[
+	{
+		"id": "2p46kq6n859mfnz",
+		"name": "Kristine White",
+		"role": "Treasurer",
+		"description": "Kris is our 'tresorier extraordinaire' who manages the finances as well as being involved in many other areas of the organisation.",
+		"email": "treasurer@afillawarra.com.au",
+		"position": 2,
+		"image": "kris_2wzqabdgsj.jpg"
+	},
+	{
+		"id": "fgziqp3bqnh22f6",
+		"name": "Rita Thakur",
+		"role": "President",
+		"description": "Rita is our fearless leader, taking on the challenges of the Alliance Francaise with skill and passion.",
+		"email": "president@afillawarra.com.au",
+		"position": 1,
+		"image": "rita2_x7n6mi08hu.jpg"
+	},
+	{
+		"id": "h7989zdwvp5dptj",
+		"name": "Margaret Frances",
+		"role": "Secretary",
+		"description": "Margaret is responsible for dotting the i's and crossing the t's - a task which she does with aplomb.",
+		"email": "secretary@afillawarra.com.au",
+		"position": 3,
+		"image": ""
+	},
+	{
+		"id": "5zfl387d4p03p32",
+		"name": "Geoff Galagher",
+		"role": "Teacher",
+		"description": "Geoff is as passionate about French as most of us are about cakes. Despite being an Aussie, he is a Francophile through and through.",
+		"email": "geoffgalagher@hotmail.com",
+		"position": 6,
+		"image": "geoff2_vqqnfe43ut.jpg"
+	},
+	{
+		"id": "zj4cxk6ifwmeker",
+		"name": "Catherine Thornberry",
+		"role": "Teacher",
+		"description": "Catherine is our native French Belgian who loves to share her language and culture with her students. ",
+		"email": "catherine@belgoz.com",
+		"position": 7,
+		"image": "cath_pe5olcq6eu.jpg"
+	},
+	{
+		"id": "1qpxnnnm740xef2",
+		"name": "David Tanner",
+		"role": "Events Coordinator",
+		"description": "If there is an event to happen, David is making it happen. Any great idea you might have, please pass them to David or Lesley.",
+		"email": "dtanner@bpps.onmicrosoft.com",
+		"position": 4,
+		"image": ""
+	},
+	{
+		"id": "cclowgfhq8x093a",
+		"name": "Lesley McCulloch",
+		"role": "Events Coordinator",
+		"description": "Lesley is one of our long time contributors, with a history in journalism and a passion for French language and culture. Lesley is also one of our events coordinators.",
+		"email": "lesleymac@bigpond.com.au",
+		"position": 5,
+		"image": ""
+	}
+]

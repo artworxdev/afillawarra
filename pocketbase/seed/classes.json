@@ -1,0 +1,68 @@
+[
+	{
+		"id": "xpe0obe0vkh5u8c",
+		"title": "C1 Advanced",
+		"description": "Advanced is for people who are comfortable with conversational French and wish to continue to improve their fluency",
+		"level": "Advanced",
+		"instructor_name": "Geoff Galagher",
+		"schedule_day": "Wednesday",
+		"schedule_time": "5:30pm - 7pm",
+		"duration_weeks": 10,
+		"price": 200
+	},
+	{
+		"id": "hp0ecx08pxzhqvs",
+		"title": "B1 Intermediate",
+		"description": "For students with basic competancy having completed the A1 and A2 levels.",
+		"level": "Intermediate",
+		"instructor_name": "Catherine Thornberry",
+		"schedule_day": "Wednesday",
+		"schedule_time": "5:30pm - 7pm",
+		"duration_weeks": 10,
+		"price": 200
+	},
+	{
+		"id": "72sghrgia2g7uf5",
+		"title": "B2 Intermediate",
+		"description": "An intermediate class for students having completed B1 level",
+		"level": "Intermediate",
+		"instructor_name": "Geoff Galagher",
+		"schedule_day": "Tuesday",
+		"schedule_time": "5:30pm - 7pm",
+		"duration_weeks": 10,
+		"price": 200
+	},
+	{
+		"id": "5jd4wlzeu6ww1dd",
+		"title": "B1/B2 Intermediate ",
+		"description": "For students who have a solid understanding of concepts and language and have completed B1.",
+		"level": "Intermediate",
+		"instructor_name": "Catherine Thornberry",
+		"schedule_day": "Tuesday",
+		"schedule_time": "5:30pm - 7pm",
+		"duration_weeks": 10,
+		"price": 200
+	},
+	{
+		"id": "fbpknmyr3ryvyb5",
+		"title": "A2 Beginners",
+		"description": "An introductory class with some basic knowledge - typically after the beginner A1 class.",
+		"level": "Beginner",
+		"instructor_name": "Catherine Thornberry",
+		"schedule_day": "Tuesday",
+		"schedule_time": "7pm - 8:30pm",
+		"duration_weeks": 10,
+		"price": 200
+	},
+	{
+		"id": "21ml5gm6cj44fit",
+		"title": "A1 Beginner ",
+		"description": "An introductory class with no prior knowledge necessary. ",
+		"level": "Beginner",
+		"instructor_name": "Geoff Galagher",
+		"schedule_day": "Tuesday",
+		"schedule_time": "7pm - 8:30pm",
+		"duration_weeks": 10,
+		"price": 200
+	}
+]

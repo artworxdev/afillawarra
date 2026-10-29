@@ -1,0 +1,34 @@
+[
+	{
+		"id": "er20bh9irefnokw",
+		"term_id": "1",
+		"term_name": "Term 1",
+		"start_date": "2026-01-27 04:24:15.000Z",
+		"end_date": "2026-04-01 04:24:37.000Z",
+		"weeks": 10
+	},
+	{
+		"id": "br0dwg1hnnlo3s0",
+		"term_id": "2",
+		"term_name": "Term 2",
+		"start_date": "2026-04-21 05:26:05.000Z",
+		"end_date": "2026-06-17 05:26:13.000Z",
+		"weeks": 9
+	},
+	{
+		"id": "itfyktwapz7i2eb",
+		"term_id": "3",
+		"term_name": "Term 3",
+		"start_date": "2026-08-18 05:26:29.000Z",
+		"end_date": "2026-09-30 05:26:41.000Z",
+		"weeks": 7
+	},
+	{
+		"id": "uprh2wg6jahoiw2",
+		"term_id": "4",
+		"term_name": "Term 4",
+		"start_date": "2026-10-13 04:27:13.000Z",
+		"end_date": "2026-12-16 04:27:24.000Z",
+		"weeks": 10
+	}
+]
