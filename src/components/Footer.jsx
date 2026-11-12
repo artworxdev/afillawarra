@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Mail, MapPin, Phone } from 'lucide-react';
+import { Facebook, Lock, Mail, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => (
 	<footer className="bg-secondary text-secondary-foreground">
@@ -66,6 +66,14 @@ const Footer = () => (
 					<Link to="#" className="text-sm opacity-60 hover:opacity-100 hover:text-primary transition-all duration-200">
 						Terms of Service
 					</Link>
+					<a
+						href="/_/"
+						aria-label="Admin"
+						title="Admin"
+						className="opacity-40 hover:opacity-100 hover:text-primary transition-all duration-200"
+					>
+						<Lock className="h-4 w-4" />
+					</a>
 				</div>
 			</div>
 		</div>
