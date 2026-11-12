@@ -59,8 +59,7 @@ const EventCard = ({ event: event }) => {
 					</h3>
 					{event.description && (
 						<div className="mb-6 relative">
-							<p className="text-muted-foreground text-sm leading-relaxed text-expandable">{event.description}</p>
-							<div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-card to-transparent group-hover:opacity-0 transition-opacity duration-300 pointer-events-none" />
+							<p className="text-muted-foreground text-sm leading-relaxed whitespace-pre-line">{event.description}</p>
 						</div>
 					)}
 					<div className="mt-auto space-y-2.5 pt-2 border-t border-border/40">

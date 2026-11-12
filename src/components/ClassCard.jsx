@@ -30,7 +30,7 @@ const ClassCard = ({ classData: classData }) => {
 						${classData.price} <span className="text-sm font-normal text-muted-foreground">per 10 week term</span>
 					</div>
 				)}
-				<CardDescription className="leading-relaxed mt-2">{classData.description}</CardDescription>
+				<CardDescription className="leading-relaxed mt-2 whitespace-pre-line">{classData.description}</CardDescription>
 			</CardHeader>
 			<CardContent className="flex-grow space-y-3">
 				{classData.instructor_name && (

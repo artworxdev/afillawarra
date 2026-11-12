@@ -28,8 +28,7 @@ const TeamCard = ({ member: member }) => {
 				<p className="text-sm font-semibold tracking-wide text-primary/80 uppercase mb-4">{member.role}</p>
 				{member.description && (
 					<div className="mb-6 relative flex-grow">
-						<p className="text-muted-foreground text-sm leading-relaxed text-expandable">{member.description}</p>
-						<div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-card to-transparent group-hover:opacity-0 transition-opacity duration-300 pointer-events-none" />
+						<p className="text-muted-foreground text-sm leading-relaxed whitespace-pre-line">{member.description}</p>
 					</div>
 				)}
 				<div className="mt-auto pt-4 border-t border-border/40">
