@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import { ArrowRight, BookOpen, Calendar, Users } from 'lucide-react';
+import pb from '@/lib/pocketbase';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
@@ -7,6 +9,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Footer from '@/components/Footer';
 
 const Home = () => {
+	const [featured, setFeatured] = useState(null);
+	useEffect(() => {
+		let cancelled = false;
+		pb.collection('events')
+			.getFullList({ filter: 'feature = true && image != ""' })
+			.then((list) => {
+				if (!cancelled && list.length > 0) setFeatured(list[Math.floor(Math.random() * list.length)]);
+			})
+			.catch((err) => console.error('Error fetching featured event:', err));
+		return () => {
+			cancelled = true;
+		};
+	}, []);
 	const offerings = [
 		{
 			icon: BookOpen,
@@ -94,7 +109,7 @@ const Home = () => {
 					<section className="py-24">
 						<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 							<h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-balance">What We Offer</h2>
-							<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+							<div className={`grid grid-cols-1 gap-8 ${featured ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-3'}`}>
 								{offerings.map((r, o) => (
 									<Card
 										key={r.title}
@@ -117,6 +132,30 @@ const Home = () => {
 										</CardContent>
 									</Card>
 								))}
+									{featured && (
+										<Link to="/events" className="block h-full">
+											<Card className="group h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border/50">
+												<div className="aspect-[4/3] w-full overflow-hidden bg-muted">
+													<img
+														src={pb.files.getURL(featured, featured.image)}
+														alt={featured.title || 'Featured event'}
+														className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+													/>
+												</div>
+												<CardHeader>
+													<p className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">Featured Event</p>
+													<CardTitle className="text-2xl mb-2">{featured.title}</CardTitle>
+													{featured.event_date && <CardDescription className="text-base">{featured.event_date}</CardDescription>}
+												</CardHeader>
+												<CardContent className="mt-auto pt-2">
+													<Button variant="ghost" className="w-full justify-between text-primary hover:text-primary hover:bg-primary/5">
+														More details
+														<ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-all duration-200" />
+													</Button>
+												</CardContent>
+											</Card>
+										</Link>
+									)}
 							</div>
 						</div>
 					</section>

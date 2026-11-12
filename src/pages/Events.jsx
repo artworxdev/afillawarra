@@ -57,7 +57,7 @@ const Events = () => {
 					<section className="py-20 md:py-24">
 						<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 							{loading ? (
-								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 									{[1, 2, 3, 4, 5, 6].map((f, index) => (
 										<div key={index} className="flex flex-col bg-card rounded-2xl overflow-hidden border border-border/40">
 											<Skeleton className="aspect-[4/3] w-full rounded-none" />
@@ -88,7 +88,7 @@ const Events = () => {
 									</Button>
 								</div>
 							) : events.length > 0 ? (
-								<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+								<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 									{events.map((f) => (
 										<div key={f.id} className="h-full">
 											<EventCard event={f} />
