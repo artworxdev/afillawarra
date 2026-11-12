@@ -37,17 +37,6 @@ const EventCard = ({ event: event }) => {
 						</div>
 					)}
 					<div className="event-tile-overlay" />
-					<div className="absolute top-4 left-4 flex flex-col gap-2 items-start">
-						<Badge className={`px-3 py-1 font-medium shadow-sm ${typeClass(event.event_type)}`}>{event.event_type || 'Event'}</Badge>
-						{!needsRegistration && (
-							<Badge
-								variant="secondary"
-								className="px-3 py-1 font-medium shadow-sm bg-secondary/90 text-secondary-foreground backdrop-blur-sm border-transparent"
-							>
-								No Registration Required
-							</Badge>
-						)}
-					</div>
 					{needsRegistration && (
 						<div className="absolute bottom-4 right-4 bg-background/90 backdrop-blur-sm p-2 rounded-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
 							<ArrowUpRight className="w-5 h-5 text-foreground" />
@@ -55,6 +44,14 @@ const EventCard = ({ event: event }) => {
 					)}
 				</div>
 				<div className="p-6 flex flex-col flex-grow bg-card relative z-20">
+					<div className="flex flex-wrap items-center gap-2 mb-4">
+						<Badge className={`px-3 py-1 font-medium ${typeClass(event.event_type)}`}>{event.event_type || 'Event'}</Badge>
+						{!needsRegistration && (
+							<Badge variant="secondary" className="px-3 py-1 font-medium border-transparent">
+								No Registration Required
+							</Badge>
+						)}
+					</div>
 					<h3
 						className={`text-xl md:text-2xl font-bold mb-3 transition-colors duration-300 ${needsRegistration ? 'group-hover:text-primary' : ''}`}
 					>
