@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "pb": "pocketbase serve --dir=pocketbase/pb_data --migrationsDir=pocketbase/pb_migrations --publicDir=pocketbase/pb_public"
+    "pb": "pocketbase serve --dir=pocketbase/pb_data --migrationsDir=pocketbase/pb_migrations --hooksDir=pocketbase/pb_hooks --publicDir=pocketbase/pb_public"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.17",
