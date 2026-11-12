@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "bash scripts/deploy.sh",
     "preview": "vite preview",
     "pb": "pocketbase serve --dir=pocketbase/pb_data --migrationsDir=pocketbase/pb_migrations --hooksDir=pocketbase/pb_hooks --publicDir=pocketbase/pb_public"
   },

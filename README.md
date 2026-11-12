@@ -30,10 +30,33 @@ Install PocketBase first if needed (`brew install pocketbase`). The migration in
 
 ## Deploying
 
-1. Host PocketBase somewhere that stays running (PocketHost, Fly.io, a small VPS). Copy `pocketbase/pb_migrations/` with it, create a superuser, then run `scripts/seed.mjs` against it (or copy the `pb_data` folder).
-2. Build the site with the hosted address: `VITE_PB_URL=https://your-pocketbase.example.com npm run build`.
-3. Upload `dist/` to any static host. Configure it to serve `index.html` for unknown paths (single-page app routing).
-4. In PocketBase settings, restrict allowed origins/CORS to your site's domain if the host supports it.
+Production runs on one Hostinger VPS (Ubuntu) at `187.127.124.202`: Caddy serves the built site from `/var/www/afillawarra` with automatic HTTPS and proxies `/hcgi/platform`, `/_/` and `/api` to PocketBase (`/opt/pocketbase`, systemd service `pocketbase`). No Docker. Content (classes, events, team, registrations) lives in PocketBase's `pb_data` on the server and is edited in the admin UI at `/_/`; deploying code never touches it.
+
+```bash
+npm run deploy
+```
+
+That runs `scripts/deploy.sh`, which needs SSH key access to the server (override the target with `DEPLOY_HOST=user@host`). It builds the site, uploads `dist/`, syncs `pocketbase/pb_migrations/` and `pocketbase/pb_hooks/`, restarts PocketBase only if one of those changed (migrations apply on restart), then checks that the pages and API respond and that registrations are still not publicly listable (403).
+
+Do it by hand if you need to:
+
+```bash
+npm run build
+rsync -az --delete dist/ root@187.127.124.202:/var/www/afillawarra/
+rsync -az pocketbase/pb_migrations/ root@187.127.124.202:/opt/pocketbase/pb_migrations/
+rsync -az pocketbase/pb_hooks/ root@187.127.124.202:/opt/pocketbase/pb_hooks/
+ssh root@187.127.124.202 'chown -R pocketbase:pocketbase /opt/pocketbase; chmod -R a+rX /var/www/afillawarra; systemctl restart pocketbase'
+```
+
+Schema changes always go in a **new** file in `pocketbase/pb_migrations/`; never edit one that has already run.
+
+### Email
+
+Form submissions email `info@afillawarra.com.au` through `pocketbase/pb_hooks/`, using Resend over SMTP. Configure it once in the admin UI under Settings, then Mail (host `smtp.resend.com`, port 465, TLS on, user `resend`, the Resend API key as the password, sender `info@afillawarra.com.au`). Incoming mail for the domain is forwarded by ImprovMX; leave the MX, SPF and ImprovMX DKIM records alone.
+
+### First-time server setup (already done)
+
+Install the PocketBase binary and Caddy, run PocketBase as a systemd service on `127.0.0.1:8090` with `--migrationsDir` and `--hooksDir`, point Caddy at the domain, create a superuser (`pocketbase superuser upsert EMAIL PASS`), then seed with `scripts/seed.mjs` through an SSH tunnel.
 
 ## Notes
 
