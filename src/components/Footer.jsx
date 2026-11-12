@@ -68,6 +68,8 @@ const Footer = () => (
 					</Link>
 					<a
 						href="/_/"
+						target="_blank"
+						rel="noopener noreferrer"
 						aria-label="Admin"
 						title="Admin"
 						className="opacity-40 hover:opacity-100 hover:text-primary transition-all duration-200"
